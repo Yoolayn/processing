@@ -13,16 +13,18 @@ class Transflag extends PApplet {
     override def draw(): Unit = {
         noStroke()
 
-        fill(91, 206, 250) // blue
-        rect(0, 0, 960, 108)
-        rect(0, 432, 960, 108)
+        val fifth: Int = (height/5).toInt
 
-        fill(245, 169, 184) // pink
-        rect(0, 108, 960, 108)
-        rect(0, 324, 960, 108)
+        fill(91,  206,     250)
+        rect(0,   0,       width, fifth)
+        rect(0,   fifth*4, width, fifth)
 
-        fill(255, 255, 255) // white
-        rect(0, 216, 960, 108)
+        fill(245, 169,     184)
+        rect(0,   fifth,   width, fifth)
+        rect(0,   fifth*3, width, fifth)
+
+        fill(255, 255,     255)
+        rect(0,   fifth*2, width, fifth)
     }
 }
 
